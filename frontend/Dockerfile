@@ -1,6 +1,7 @@
 FROM node:14.16.0-alpine3.13
 
-RUN addGroup app && adduser -S -G app app
+
+RUN addgroup --system app && adduser --system --ingroup app app
 USER app
 
 WORKDIR /app
