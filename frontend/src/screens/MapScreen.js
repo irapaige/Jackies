@@ -48,6 +48,7 @@ export default function MapScreen() {
         headers: { Authorization: `BEARER ${userInfo.token}` },
       });
       setGoogleApiKey(data.key);
+      console.log(data.key)
       getUserCurrentLocation();
     };
 
@@ -100,7 +101,7 @@ export default function MapScreen() {
     <div className="full-box">
       <LoadScript libraries={libs} googleMapsApiKey={googleApiKey}>
         <GoogleMap
-          id="smaple-map"
+          id="map"
           mapContainerStyle={{ height: '100%', width: '100%' }}
           center={center}
           zoom={15}
