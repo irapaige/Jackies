@@ -9,6 +9,7 @@ export const baseUrl = () =>
     : 'https://yourdomain.com';
 
 export const generateToken = (user) => {
+
   return jwt.sign(
     {
       _id: user._id,

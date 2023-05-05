@@ -23,6 +23,7 @@ userRouter.get(
   isAdmin,
   expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id);
+    console.log(user)
     if (user) {
       res.send(user);
     } else {
@@ -134,7 +135,7 @@ userRouter.put(
       res.send({ message: 'User Updated', user: updatedUser });
     } else {
       res.status(404).send({ message: 'User Not Found' });
-    }
+    }console.log(user)
   })
 );
 
@@ -183,6 +184,7 @@ userRouter.post(
       name: req.body.name,
       email: req.body.email,
       password: bcrypt.hashSync(req.body.password),
+
     });
     const user = await newUser.save();
     res.send({
@@ -192,6 +194,7 @@ userRouter.post(
       isAdmin: user.isAdmin,
       token: generateToken(user),
     });
+    console.log(Token)
   })
 );
 
