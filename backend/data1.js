@@ -15,7 +15,7 @@ const data = {
       isAdmin: false,
     },
   ],
-  products: [
+  products:[
     {
       // _id: '1',
       name: 'Nike Slim shirt',
