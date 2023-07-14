@@ -1,24 +1,29 @@
- version: "3.8"
- services:
-    web:
-       build: ./frontend
-       ports:
-       - 3000:3000
+version: "3.8"
 
-    api:
-      build: ./backend
-      ports:
-         - 4000:4000
-      environment:
-       DB_URL: mongodb://db/jackie's
+services:
+  frontend:
+    depends_on: 
+      - backend
+    build: ./frontend
+    ports:
+      - 3000:3000
 
-    db:
-        image: mongo:4.0-xenial
-        ports:
-          - 27017:27017
-        volumes:
-          - Jackie:/data/db        
- volumes:
+  backend: 
+    depends_on: 
+      - db
+    build: ./backend
+    ports: 
+      - 3001:3001
+    environment: 
+      DB_URL: mongodb://db/Jackie
+#    command: ./docker-entrypoint.sh
+
+  db:
+    image: mongo:4.0-xenial
+    ports:
+      - 27017:27017
+    volumes:
+      - Jackie:/data/db
+
+volumes:
   Jackie:
- 
-   

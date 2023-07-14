@@ -1,4 +1,5 @@
 {
+  "Homepage": "https://github.com/irapaige/Jackies.git",
   "name": "jackies",
   "version": "1.0.0",
   "description": "# Lessons",
@@ -6,7 +7,9 @@
   "scripts": {
     "build": "cd backend && npm install  && cd ../frontend && npm install && npm run build",
     "start": "node, backend/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -14,6 +17,5 @@
   },
   "author": "",
   "license": "ISC",
-  
   "homepage": "https://github.com/irapaige/jackie.git"
 }
