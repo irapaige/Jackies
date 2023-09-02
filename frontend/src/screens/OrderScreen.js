@@ -259,7 +259,7 @@ export default function OrderScreen() {
                         <Link to={`/product/${item.slug}`}>{item.name}</Link>
                       </Col>
                       <Col md={3}>
-                        <span>{item.quantity}</span>
+                        <span>{item.qty}</span>
                       </Col>
                       <Col md={3}>${item.price}</Col>
                     </Row>
