@@ -66,6 +66,7 @@ export const payOrderEmailTemplate = (order) => {
   <tr>
   <td><strong>Product</strong></td>
   <td><strong>qty</strong></td>
+<!--  TODO-Fix alienment attribute-->
   <td><strong align="right">Price</strong></td>
   </thead>
   <tbody>

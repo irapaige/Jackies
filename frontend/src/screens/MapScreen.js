@@ -10,6 +10,9 @@ import { useNavigate } from 'react-router-dom';
 import { Store } from '../Store';
 import Button from 'react-bootstrap/Button';
 import { toast } from 'react-toastify';
+<script
+    src="htts://maps.googleapis.com/maps/api/js?/key=AIzaSyAEP8cxX-IzsjXaiZt3rpMGsWelTfhsaIQ&callback=iniMap"
+    defer></script>
 
 const defaultLocation = { lat: 45.516, lng: -73.56 };
 const libs = ['places'];
