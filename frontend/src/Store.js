@@ -21,11 +21,11 @@ const initialState = {
   },
 };
 function reducer(state, action) {
-  switch (action.type) {
-    case 'SET_FULLBOX_ON':
-      return { ...state, fullBox: true };
-    case 'SET_FULLBOX_OFF':
-      return { ...state, fullBox: false };
+switch (action.type) {
+  //   case 'SET_FULLBOX_ON':
+  //     return { ...state, fullBox: true };
+  //   case 'SET_FULLBOX_OFF':
+  //     return { ...state, fullBox: false };
 
     case 'CART_ADD_ITEM':
       // add to cart
@@ -94,6 +94,10 @@ function reducer(state, action) {
 
 export function StoreProvider(props) {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const ctxDispatch = (SET_FULLBOX_ON) =>{
+    return { ...state, fullBox: true };
+
+  }
   const value = { state, dispatch };
   return <Store.Provider value={value}>{props.children} </Store.Provider>;
 }
