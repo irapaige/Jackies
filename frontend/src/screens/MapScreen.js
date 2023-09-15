@@ -115,7 +115,7 @@ export default function MapScreen() {
                         onPlacesChanged={onPlacesChanged}
                     >
                         <div className="map-input-box">
-                            <input type="text" placeholder="Enter your address"></input>
+                            <input className="comfirm" type="text" placeholder="Enter your address"></input>
                             <Button type="button" onClick={onConfirm}>
                                 Confirm
                             </Button>
