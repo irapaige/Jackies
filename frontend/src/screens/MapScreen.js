@@ -58,7 +58,7 @@ export default function MapScreen() {
         ctxDispatch({
             type: 'SET_FULLBOX_ON',
         });
-    }, [ctxDispatch,userInfo.token]);
+    }, [ctxDispatch,userInfo.token,googleApiKey]);
 
     const onLoad = (map) => {
         mapRef.current = map;
